@@ -8,8 +8,11 @@ export const App = () => {
   const add100 = () => setCount(prev => prev + 100);
 
   const increase = () => {
-    if (count % 5 === 0) add100();
-    addOne();
+    if (count % 5 === 0) {
+      setCount(prev => prev + 101);
+    } else {
+      setCount(prev => prev + 1);
+    }
   };
 
   return (
